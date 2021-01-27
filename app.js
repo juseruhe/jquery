@@ -107,6 +107,16 @@ parrafo.toggleClass('has-text-centered is-size-2')
 })*/
 
 
+// Evento Click con submit
+/*$('#formulario').submit(function(evento){
+
+   evento.preventDefault()
+  var nombre =  $('#nombre').val()
+   console.log(nombre)
+
+})
+})
+*/
 
 
 
@@ -114,14 +124,85 @@ parrafo.toggleClass('has-text-centered is-size-2')
 
 
 
+// 6. Efectos
+
+
+/* Efectos Hide,Show,Toggle
+var resultado = $('#resultado')
+
+$('.has-background-grey').click(function(){
+
+resultado.hide(1000)
+
+})
+
+$('.has-background-info').click(function(){
+
+   resultado.show(1000)
+   
+   })
+
+   $('.has-background-warning').click(function(){
+
+      resultado.toggle(1000)
+      
+      })
+   
+*/
 
 
 
+/*  Efecto fade()
+var resultado = $('#resultado')
 
+$('.has-background-grey').click(function(){
+
+resultado.fadeOut(3000)
+
+})
+
+$('.has-background-info').click(function(){
+
+   resultado.fadeIn(2000)
+   
+   })
+
+   $('.has-background-warning').click(function(){
+
+      resultado.fadeToggle(1000)
+      
+      })
+
+*/
+
+
+
+// Función animate
+
+// variable.animate({parametros},velocidad, callback => () {} )
+var resultado = $('#resultado')
+
+$('.has-background-grey').click(function(){
+
+   resultado.animate({
+      left:'100px',
+opacity: '0.4',
+width: '+=200px',
+height: '+=200px'
+}, 5000, function(){
+
+   resultado.animate({
+      left:'0px',
+      opacity: '1',
+      width: '-=200px',
+      height: '-=200px'
+   },1000)
+})
+
+})
 
 
 
 
 
 })
-
